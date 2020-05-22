@@ -25,10 +25,18 @@
   </head>
   <!-- BODY-->
   <body>
-    <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
+    <nav
+      class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark"
+      style="transition: 0.5s; padding: 60px 10px;"
+      id="navbar"
+    >
+      <a
+        class="navbar-brand"
+        href="#"
+        id="logo"
+        style="font-size: 35px; margin-left: 10px;"
+      >
         <i class="fas fa-brain"></i>
-        Logo
       </a>
       <button
         class="navbar-toggler"
@@ -167,30 +175,33 @@
         >
       </div>
     </nav>
-    <h1>
-      I think the only card she has is the Lorem card. An ‘extremely credible
-      source’ has called my office and told me that Barack Obama’s placeholder
-      text is a fraud. I know words. I have the best words. I don't think
-      anybody knows it was Russia that wrote Lorem Ipsum, but I don't know,
-      maybe it was. It could be Russia, but it could also be China. It could
-      also be lots of other people. It also could be some wordsmith sitting on
-      their bed that weights 400 pounds. Ok? My placeholder text, I think, is
-      going to end up being very good with women. Lorem Ipsum is the single
-      greatest threat. We are not - we are not keeping up with other websites. I
-      think the only card she has is the Lorem card. He’s not a word hero. He’s
-      a word hero because he was captured. I like text that wasn’t captured. I
-      will write some great placeholder text – and nobody writes better
-      placeholder text than me, believe me – and I’ll write it very
-      inexpensively. I will write some great, great text on your website’s
-      Southern border, and I will make Google pay for that text. Mark my words.
-      It’s about making placeholder text great again. That’s what people want,
-      they want placeholder text to be great again. Look at that text! Would
-      anyone use that? Can you imagine that, the text of your next webpage?!
-      Lorem Ipsum is unattractive, both inside and out. I fully understand why
-      it’s former users left it for something else. They made a good decision.
-      My text is long and beautiful, as, it has been well documented, are
-      various other parts of my website.
-    </h1>
+    <div class="div-spacer" id="nav-spacer"></div>
+    <div>
+      <h1>
+        I think the only card she has is the Lorem card. An ‘extremely credible
+        source’ has called my office and told me that Barack Obama’s placeholder
+        text is a fraud. I know words. I have the best words. I don't think
+        anybody knows it was Russia that wrote Lorem Ipsum, but I don't know,
+        maybe it was. It could be Russia, but it could also be China. It could
+        also be lots of other people. It also could be some wordsmith sitting on
+        their bed that weights 400 pounds. Ok? My placeholder text, I think, is
+        going to end up being very good with women. Lorem Ipsum is the single
+        greatest threat. We are not - we are not keeping up with other websites.
+        I think the only card she has is the Lorem card. He’s not a word hero.
+        He’s a word hero because he was captured. I like text that wasn’t
+        captured. I will write some great placeholder text – and nobody writes
+        better placeholder text than me, believe me – and I’ll write it very
+        inexpensively. I will write some great, great text on your website’s
+        Southern border, and I will make Google pay for that text. Mark my
+        words. It’s about making placeholder text great again. That’s what
+        people want, they want placeholder text to be great again. Look at that
+        text! Would anyone use that? Can you imagine that, the text of your next
+        webpage?! Lorem Ipsum is unattractive, both inside and out. I fully
+        understand why it’s former users left it for something else. They made a
+        good decision. My text is long and beautiful, as, it has been well
+        documented, are various other parts of my website.
+      </h1>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -209,5 +220,25 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 80 ||
+          document.documentElement.scrollTop > 80
+        ) {
+          document.getElementById("navbar").style.padding = "20px 10px";
+          document.getElementById("nav-spacer").style.padding = "45px 10px";
+        } else {
+          document.getElementById("navbar").style.padding = "60px 10px";
+          document.getElementById("nav-spacer").style.padding = "95px 10px";
+        }
+      }
+    </script>
   </body>
 </html>

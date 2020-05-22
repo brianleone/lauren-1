@@ -4,6 +4,7 @@ body {
 
 .navbar {
   margin-bottom: 20px;
+  z-index: 9999;
 }
 
 .padded-nav-item {
@@ -57,4 +58,8 @@ body {
 .hoverable:focus:before {
   opacity: 1;
   transform: translateY(-5px);
+}
+
+.div-spacer {
+  padding: 95px 10px;
 }
