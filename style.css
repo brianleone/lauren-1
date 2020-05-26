@@ -2,9 +2,37 @@ body {
   padding-bottom: 20px;
 }
 
-.navbar {
-  margin-bottom: 20px;
-  z-index: 9999;
+#tele-number {
+  transition: 0.5s;
+  transition-property: transform;
+  color: #888888;
+  font-size: 1.5em;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+}
+
+#logo {
+  font-size: 25px;
+  margin-left: 10px;
+  color: #888888;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+#logo:hover {
+  color: white;
+}
+#navbar-top {
+  height: 7em;
+  transition: all 0.5s linear;
+}
+.navbar-address {
+  color: #888888;
+  font-size: 0.9em;
+  padding: 0px;
+  margin: 0px;
 }
 
 .padded-nav-item {
@@ -17,9 +45,12 @@ body {
   vertical-align: middle;
   position: relative;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  tranform: translateZ(0);
+  transform: translateZ(0);
   transition-duration: 0.3s;
   transition-property: transform;
+}
+.fixed-top-padded {
+  top: 7em;
 }
 
 .hoverable:before {
@@ -61,5 +92,5 @@ body {
 }
 
 .div-spacer {
-  padding: 95px 10px;
+  padding: 85px 10px;
 }
